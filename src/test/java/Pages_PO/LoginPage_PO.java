@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import java.sql.Driver;
 import java.util.concurrent.TimeUnit;
-
 public class LoginPage_PO {
     WebDriver driver;
     Actions action;
@@ -27,7 +26,7 @@ public class LoginPage_PO {
         action = new Actions(driver);
         action.moveToElement(menu).perform();
         driver.findElement(signIn_Menu).click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
             driver.findElement(txt_username).sendKeys(username);
             driver.findElement(btn_Continue).click();
@@ -46,7 +45,6 @@ public class LoginPage_PO {
         action = new Actions(driver);
         action.moveToElement(Menu).perform();
         driver.findElement(btn_Logout).click();
-        System.out.println("user logged out successfully");
     }
 //        public void verifyLogout() {
 //            WebElement Menu = driver.findElement(mnu_user);

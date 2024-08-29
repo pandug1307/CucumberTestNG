@@ -2,7 +2,9 @@ package StepDefinitions;
 
 import Pages_PO.LoginPage_PO;
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
+import io.cucumber.java.BeforeStep;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,14 +15,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 public class LoginPage_TC {
     WebDriver driver;
     LoginPage_PO loginPagePo;
+//    @Parameters({"browsername", "driverpath"})
     @Before
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver.exe");

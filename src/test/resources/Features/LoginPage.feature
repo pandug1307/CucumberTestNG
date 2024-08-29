@@ -1,11 +1,10 @@
-@LoginPage
 
-  Feature: Login to Amazon application
+Feature: Login to Amazon application
 
     Background:
     Given user is on Amazon page "https://www.amazon.in/"
 
-    @ValidCredentials
+    @smoketest @ValidCredentials
     Scenario: Login with valid credentials
 
       When user enters username as "7043838900" and password as "Hello@123"
@@ -13,7 +12,7 @@
 #      When hits SignOut button
 #      Then back to Login page
 
-    @InvalidCredentials
+    @smoketest @InvalidCredentials
     Scenario Outline: Login with invalid credentials
 
       When user enters username as "<username>" and password as "<password>"
